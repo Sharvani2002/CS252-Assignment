@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <iostream.h>
 #define MAX_THREADS 3
-int isprime ;
+int isprime;
 // Prototypes are good and handy, but not necessary in this example.
 // These three functions are run by each of our three threads
 // Please note how the functions are declared:
@@ -11,9 +11,9 @@ int isprime ;
 // In short,
 // Return value *must* be DWORD WINAPI
 // And the parameter must be LPVOID
-DWORD WINAPI genericThreadFunc1(LPVOID);
-DWORD WINAPI printString(LPVOID);
-DWORD WINAPI printNumber(LPVOID);
+DWORD WINAPI genericThreadFunc1 (LPVOID);
+DWORD WINAPI printString (LPVOID);
+DWORD WINAPI printNumber (LPVOID);
 
 // We need an array of Handles to threads
 HANDLE hThreads[MAX_THREADS];
@@ -23,32 +23,35 @@ DWORD id[MAX_THREADS];
 DWORD waiter;
 // Here are the three functions that are defined.
 // They do trivial things and should be mostly self explanatory.
-DWORD WINAPI genericThreadFunc1(LPVOID n)
+DWORD WINAPI genericThreadFunc1 (LPVOID n)
 {
-cout << "Thread started (genericThreadFunc1)..." << endl;
-for(int i = 0; i < 100; i++) {
-cout << "threadFunc1 says: " << i << endl;
+  cout << "Thread started (genericThreadFunc1)..." << endl;
+  for (int i = 0; i < 100; i++)
+    {
+      cout << "threadFunc1 says: " << i << endl;
+    }
+  cout << "...(genericThreadFunc1) Thread terminating." << endl;
+  return (DWORD)n;
 }
-cout << "...(genericThreadFunc1) Thread terminating." << endl;
-return (DWORD)n;
-}
-DWORD WINAPI printString(LPVOID n)
+DWORD WINAPI printString (LPVOID n)
 {
-cout << "Thread started (printString)..." << endl;
+  cout << "Thread started (printString)..." << endl;
 // NOTE: In the next line, we make a pointer and cast what was passed in.
 // This is how you use the LPVOID parameters passed into the
 // CreateThread call (below).
-char* str = (char*)n;
-for(int i = 0; i < 50; i++) {
-cout << "printString says: " << str << endl;
+  char* str = (char*)n;
+  for (int i = 0; i < 50; i++)
+    {
+      cout << "printString says: " << str << endl;
+    }
+  cout << "...(printString) Thread terminating." << endl;
+  return (DWORD)n;
 }
-cout << "...(printString) Thread terminating." << endl;
-return (DWORD)n;
-}DWORD WINAPI printNumber(LPVOID n)
+DWORD WINAPI printNumber (LPVOID n)
 {
-int num = (int)n;
-for( int i = 2 ; i <= n ; i++)
-{
+  int num = (int)n;
+  for ( int i = 2; i <= n; i++)
+    {
 // isprime = 1;
 //for( int j = 2 ; j <= i ; j++)
 
@@ -57,25 +60,27 @@ for( int i = 2 ; i <= n ; i++)
 //else if( i % j == 0)
 //isprime = 0;
 //}
-if(isprime)
-cout<<i<< endl;
-}
+      if (isprime)
+        {
+          cout << i << endl;
+        }
+    }
 
 //cout << "Thread started (printNumber)..." << endl;
 //int num = (int)n;
 //for (int i = num; i < (num + 100); i++) {
 //cout << "printNumber says: " << i << endl;
 //}
-cout << "...(printHello) Thread terminating." << endl;
-return (DWORD)n;
+  cout << "...(printHello) Thread terminating." << endl;
+  return (DWORD)n;
 }
 
 // Get ready, because here's where all the *REAL* magic happens
-int main(int argc, char* argv[ ])
+int main (int argc, char* argv[])
 {
-int CONSTANT = 2000, isprime;
-char myString[20];
-strcpy(myString,"Threads are Easy!");
+  int CONSTANT = 2000, isprime;
+  char myString[20];
+  strcpy (myString,"Threads are Easy!");
 // Here is where we call the CreateThread Win32 API Function that actually
 // creates and begins execution of a thread.
 // Please read your help files for what each parameter does on
@@ -101,7 +106,8 @@ waiter = WaitForMultipleObjects(MAX_THREADS, hThreads, TRUE, INFINITE);
 // After all three threads have finished their task, "main" resumes and we're now ready
 // to close the handles of the threads. This is just a bit of clean up work.
 // Use the CloseHandle (API) function to do this. (Look it up in the help files as well)
-for(int i = 0; i < MAX_THREADS; i++) {
+for(int i = 0; i < MAX_THREADS; i++) 
+{
 CloseHandle(hThreads[i]);
 }
 system ("pause");
