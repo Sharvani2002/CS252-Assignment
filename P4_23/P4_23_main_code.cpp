@@ -1,49 +1,72 @@
 #include <iostream>
 #include <cmath> 
-#include <thread>
 #include <vector>
-std::vector<int> primes;
+#include <cstring>
+//Implementing threads using the thread library
+#include <thread>
+// #include <boost/thread.hpp>
+//Include this if you are using windows
+#include "mingw.thread.h"
 
+int n;
+std::vector<int> primeNumbers;
 
-void calculatePrimes(int how_many){
-if(how_many == 1) {
-primes.emplace_back(2);
-return;
+void startProgram()
+{
+    std::cout << "Enter the value of the number for which all the prime numbers until that number (inclusive) would be printed: ";
+    std::cin >> n;
 }
-int generated_numbers = 1;
-primes.emplace_back(2);
-int prime_candidate = 3;
 
-while(generated_numbers < how_many) {
-    bool is_prime = true;
-    for(int i = 3; i<=std::sqrt(prime_candidate); i+=2) {
-        if(prime_candidate % i == 0) 
+
+//find the prime numbers using Sieve of eratosthenes method
+void findPrimes()
+{
+    if(n <= 1) 
+    {
+        return;
+    }
+    
+    bool prime[n + 1];
+    std::memset(prime, true, sizeof(prime));
+ 
+    for (int i = 2; i*i <= n; i++)
+    {
+        if (prime[i] == true)
         {
-            is_prime = false;
-            break;
+        
+            /*
+            Mark all multiples of the prime number (i) greater than or equal to the square of it as false.
+            As numbers which are multiple of the prime number(i) and are less than i^2 are already marked.
+            */
+            for (int k = i*i; k <= n; k += i)
+                prime[k] = false;
         }
     }
-    if(is_prime){
-        primes.emplace_back(prime_candidate);
-        generated_numbers++;
+    //push all the prime numbers to the vector
+    for(int i = 2; i<=n; i++)
+    {
+        if(prime[i])
+        {
+            primeNumbers.emplace_back(i);
+        }
+        
     }
-    prime_candidate+=2;
-}
-
 
 
 }
+
+
 
 
 int main() {
-    int how_many_primes;
-    std::cout << "Enter the number of primes you wish to generate\n";
-    std::cin >> how_many_primes;
-    std::thread t1(calculatePrimes,how_many_primes);
+    std::thread t1(startProgram);
     t1.join();
-    for(unsigned int i = 0; i < primes.size(); i++) {
-        std::cout << primes[i] << ' ';
-        if(i%10==0 && i!= 0){
+    std::thread t2(findPrimes);
+    t2.join();
+    for(unsigned int i = 0; i < primeNumbers.size(); i++) {
+        std::cout << primeNumbers[i] << ' ';
+        if(i%20==0 && i!= 0)
+        {
             std::cout << '\n';
         }
     }
