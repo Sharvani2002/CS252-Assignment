@@ -33,7 +33,6 @@ Some points to note:
 
 - If `main()` finishes before the threads it has created, and exits with `pthread_exit()`, the other threads will continue to execute. Otherwise, they will be automatically terminated when main() finishes.
 - The `pthread_exit()` function never returns. If the thread is not detached, the thread id and return value may be examined from another thread by using `pthread_join`.
-- To allow other threads to continue execution, the main thread should terminate by calling `pthread_exit()` rather than `exit()`.
 - Joinable threads must be terminated by other threads (using `pthread_join`) in order to free memory resources. Detached threads cannot be reaped or killed by other threads, and resources are automatically reaped on termination. 
 <!-- - So unless threads need to synchronize among themselves, it is better to call `pthread_detach(pthread_self());` instead of `pthread_join`. -->
 - The detached attribute merely determines the behavior of the system when the thread terminates. It does not prevent the thread from being terminated if the process terminates using exit() or equivalently, if the main thread returns.
