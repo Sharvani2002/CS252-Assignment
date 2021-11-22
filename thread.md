@@ -12,3 +12,8 @@ Pthreads4w version 3.0.0 or later, released under the Apache Public License v2.0
 - The `Mingw-w64` project also contains a wrapper implementation of pthreads, `winpthreads`, which tries to use more native system calls than the Pthreads4w project.
 
 
+
+
+### References
+Here are some links which I referred to understand abot pthreads:
+https://en.wikipedia.org/wiki/Pthreads
