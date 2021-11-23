@@ -6,7 +6,7 @@ the number entered by the user.
 
 
 ## Running the program:
-The program `P4_23_code1.c` uses the pthread library and the program `P4_23_code2.cpp` uses the thread library of C++. All the code fils have been tested on Ubuntu (specifications in <a href="https://github.com/Sharvani2002/CS252-Assignment/blob/main/README.md">README.md</a>)
+The program `P4_23_code1.c` uses the pthread library and the program `P4_23_code2.cpp` uses the thread library of C++. All the code files have been tested on Ubuntu (specifications in <a href="https://github.com/Sharvani2002/CS252-Assignment/blob/main/README.md">README.md</a>)
 
 Note: The program `P4_23_code2.cpp` has also been tested on windows (VS code editor) by including the header files `mingw.thread.h` and `mingw.invoke.h`.
 These 2 header files have been taken from <a href="https://github.com/meganz/mingw-std-threads.git">this</a> repository.
