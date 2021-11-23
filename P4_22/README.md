@@ -47,7 +47,7 @@ The median value is 3.500000
 The standard deviation is 1.118034
 ```
 ### Screenshot from my terminal:
-<img src="https://drive.google.com/file/d/1htJWDs3Nr54uD5_N7mv6KWYUdIX1ECii/view?usp=sharing" width="500" height="100" />
+<img src="https://github.com/Sharvani2002/CS252-Assignment/blob/main/Images/P4_22_sample_output1.png" width="800" height="175" />
 
 
 ## References:
