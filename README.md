@@ -1,4 +1,4 @@
-# CS252 - Operating Systems Assignment
+# CS252 (Minors) Operating Systems Assignment
 Submitted by: <br>
 Sharvani Laxmi Somayaji <br>
 191EE247 
