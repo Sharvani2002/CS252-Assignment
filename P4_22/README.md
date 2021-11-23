@@ -51,4 +51,4 @@ The standard deviation is 1.118034
 
 
 ## References:
-The code in `P4_22_code1.c` is not taken from anywhere. I have referred to <a href="https://gist.github.com/Jabiribn/e58bf13c678953891900e5f982b48037">this</a> gist and other tutorials/resources mentioned in `threads.md`.
+The code in `P4_22_code1.c` is not taken from anywhere. I have referred to <a href="https://gist.github.com/Jabiribn/e58bf13c678953891900e5f982b48037">this</a> gist and other tutorials/resources mentioned in `thread.md`.
