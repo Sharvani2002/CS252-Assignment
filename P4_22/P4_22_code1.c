@@ -160,24 +160,24 @@ main ()
 
   int returnValue;
   //creating independent threads as required
-  if ( (returnValue = pthread_create ( &threadId1, 0, &ThreadFunction1, 0)) )
+  if ( (returnValue = pthread_create ( &threadId1, 0, ThreadFunction1, 0)) )
     {
       printf ("Thread creation failed: %d\n", returnValue);
     }
-  if ( (returnValue = pthread_create (&threadId2,0,&ThreadFunction2,0)) )
+  if ( (returnValue = pthread_create (&threadId2,0,ThreadFunction2,0)) )
     {
       printf ("Thread creation failed: %d\n", returnValue);
     }
 
-  if ( (returnValue = pthread_create ( &threadId3, 0, &ThreadFunction3, 0)) )
+  if ( (returnValue = pthread_create ( &threadId3, 0, ThreadFunction3, 0)) )
     {
       printf ("Thread creation failed: %d\n", returnValue);
     }
-  if ( (returnValue = pthread_create ( &threadId4, 0, &ThreadFunction4, 0)) )
+  if ( (returnValue = pthread_create ( &threadId4, 0, ThreadFunction4, 0)) )
     {
       printf ("Thread creation failed: %d\n", returnValue);
     }
-  if ( (returnValue = pthread_create ( &threadId5, 0, &ThreadFunction5, 0)) )
+  if ( (returnValue = pthread_create ( &threadId5, 0, ThreadFunction5, 0)) )
     {
       printf ("Thread creation failed: %d\n", returnValue);
     }

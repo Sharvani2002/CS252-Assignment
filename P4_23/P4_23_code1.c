@@ -80,7 +80,7 @@ main ()
       (arguement[k]).low = BUCKET_SIZE * k + 1;
       arguement[k].high = BUCKET_SIZE * (k + 1);
 
-      if ( (returnValue = pthread_create ( &threadId[k], 0, &FindPrimes, (void *)&arguement[k])) )
+      if ( (returnValue = pthread_create ( &threadId[k], 0, FindPrimes, (void *)&arguement[k])) )
         {
           printf ("Thread creation failed: %d\n", returnValue);
         }
@@ -94,7 +94,7 @@ main ()
   arguement[k].high = n;
   pthread_t threadid_temp = threadId[k];
 
-  if ( (returnValue = pthread_create (&threadId[k], 0, &FindPrimes, (void *)&arguement[k])) )
+  if ( (returnValue = pthread_create (&threadId[k], 0, FindPrimes, (void *)&arguement[k])) )
     {
       printf ("Thread creation failed: %d\n", returnValue);
     }
