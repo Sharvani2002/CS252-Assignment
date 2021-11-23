@@ -5,8 +5,8 @@
 The below header file has been included to use all the functions of the POSIX or pthreads library.
 Note that on Linux, programs that use the Pthreads API should be compiled using cc -pthread.
 */
-#include<pthread.h>
-
+#include <pthread.h>
+#include <winpthreads.h>
 
 //Declaring the global variables
 int arr[1000];
