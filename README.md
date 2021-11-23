@@ -20,7 +20,7 @@ This assignment contains the solutions to the the following problems in Operatin
 #
 
 ### Coding Practices
-I have tried to follow the coding practices according to <a href="https://www.nsnam.org/develop/contributing-code/coding-style/">ns-3 coding style</a> and have used <a href="https://code.nsnam.org/ns-3.26/file/af21cf79d193/utils/check-style.py">check-style.py</a> for formatting.
+I have tried to follow the coding practices according to <a href="https://www.nsnam.org/develop/contributing-code/coding-style/">ns-3 coding style</a> and used <a href="https://code.nsnam.org/ns-3.26/file/af21cf79d193/utils/check-style.py">check-style.py</a> for formatting.
 
 
 
