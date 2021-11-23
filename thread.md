@@ -44,8 +44,11 @@ Some points to note:
 
 ### References
 This document contains my understanding about pthread library and its functions. I had referred some websites to understand about pthreads:<br>
-https://en.wikipedia.org/wiki/Pthreads <br>
-https://www.geeksforgeeks.org/thread-functions-in-c-c/ <br>
-https://man7.org/linux/man-pages/man3/pthread_detach.3.html <br>
+- <a href="https://en.wikipedia.org/wiki/Pthreads">Wikipedia</a>
+- <a href="https://www.geeksforgeeks.org/thread-functions-in-c-c/">geeksforgeeks</a>
+- <a href="https://hpc-tutorials.llnl.gov/posix/">POSIX Threads Programming tutorials</a>
+- <a href="https://man7.org/linux/man-pages/man7/pthreads.7.html">Pthreads linux manual page</a>
+- <a href="http://www.csc.villanova.edu/~mdamian/threads/posixthreads.html">pthreads by cs.cmu.edu</a>
+- <a href="http://www.csc.villanova.edu/~mdamian/threads/posixthreads.html">Tutorails in this site</a>
 
 <a href="https://docs.google.com/document/d/1sjiPWxjO6kNHuu8abBb3OAKYutqJIRi0ams3mujcOrU/edit?usp=sharing">This</a> link contains my notes related to the threads topic and implementation.
