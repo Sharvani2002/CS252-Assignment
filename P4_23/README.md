@@ -13,3 +13,4 @@ These 2 header files have been taken from <a href="https://github.com/meganz/min
 
 
 ## References:
+The code in `P4_23_code1.c` and `P4_23_code2.cpp` are not taken from anywhere. I have referred to <a href="https://stackoverflow.com/questions/26090901/find-prime-numbers-in-a-separate-thread">this</a> link and other tutorials mentioned in the file `thread.md` to understand the syntax and the pthread functions. 
