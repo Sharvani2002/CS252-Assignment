@@ -22,7 +22,7 @@ that determine other statistical values, such as median and standard
 deviation.)
 
 ## Solution
-The solution to the problem is in the c file, `P4_22_code1.c`. This uses the pthread library to create and manage threads. It uses the math library for computing the statistical values.
+The solution to the problem is in the c file, `P4_22_code1.c`. This uses the pthread library to create and manage threads. It uses the math library for computing the statistical values. All the code files have been tested on Ubuntu (specifications in <a href="https://github.com/Sharvani2002/CS252-Assignment/blob/main/README.md">README.md</a>)
 
 ## Executing the codes
 To execute the file `P4_22_code1.c` on Linux:
